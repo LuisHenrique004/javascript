@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Qual o resultado da soma?</h1>
+    <label for="inum1">Numero 1:</label>
+    <output name="numero1" id="inum1">0</output> <br> + <br>
+    <label for="inum2">Numero 2:</label> 
+    <output name="numero2" id="inum2">0</output>
+    <div>
+        <input type="number" name="valor" id="ivalor">
+        <input type="button" value="Verificar soma" onclick="validar()">
+    </div>
+    <div id="msg">
+        
+    </div>
+
+    <script>
+        function randomNumber() {
+            return Math.floor(Math.random() * (10 - 1 + 1)) + 1
+        }
+
+        var n1 = randomNumber()
+        var n2 = randomNumber()
+
+        var out1 = window.document.getElementById('inum1')
+        out1.innerHTML = n1
+        var out2 = window.document.getElementById('inum2') 
+        out2.innerHTML = n2
+        var soma = (n1 + n2)
+
+        function validar() {
+            var res = window.document.getElementById('msg')
+            var txtvalor = window.document.getElementById('ivalor')
+            var val = Number(txtvalor.value)
+            if (val == soma) {
+                res.innerHTML = `Parabéns, Realmente a soma entre ${n1} e ${n2} é igual a: ${val}`
+            } else {
+                res.innerHTML = `Ops, você errou dessa vez,a soma entre ${n1} e ${n2} é igual a ${soma} e não ${val}`
+            }
+        }
+    </script>
+</body>
+</html>

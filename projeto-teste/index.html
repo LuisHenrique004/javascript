@@ -9,54 +9,57 @@
         * {
             margin: 0px;
             padding: 0px;
+            box-sizing: border-box;
         }
 
         body {
             background-color: black;
-            color: white;
+        }
+
+        main {
+            display: block;
+            position: relative;
+            width: 98vw;
+            height: 98vh;
+        }
+        
+        nav {
+            width: 110px;
             text-align: center;
+            margin: 10px 0px;
+        }
+
+        nav > a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+
+            width: 60%;
+            height: 90%;
         }
 
     </style>
 </head>
 <body>
-    <h1>Qual o resultado da soma?</h1>
-    <label for="inum1">Numero 1:</label>
-    <output name="numero1" id="inum1">0</output> <br> + <br>
-    <label for="inum2">Numero 2:</label> 
-    <output name="numero2" id="inum2">0</output>
-    <div>
-        <input type="number" name="valor" id="ivalor">
-        <input type="button" value="Verificar soma" onclick="validar()">
-    </div>
-    <div id="msg">
-        
-    </div>
-
-    <script>
-        function randomNumber() {
-            return Math.floor(Math.random() * (10 - 1 + 1)) + 1
-        }
-
-        var n1 = randomNumber()
-        var n2 = randomNumber()
-
-        var out1 = window.document.getElementById('inum1')
-        out1.innerHTML = n1
-        var out2 = window.document.getElementById('inum2') 
-        out2.innerHTML = n2
-        var soma = (n1 + n2)
-
-        function validar() {
-            var res = window.document.getElementById('msg')
-            var txtvalor = window.document.getElementById('ivalor')
-            var val = Number(txtvalor.value)
-            if (val == soma) {
-                res.innerHTML = `Parabéns, Realmente a soma entre ${n1} e ${n2} é igual a: ${val}`
-            } else {
-                res.innerHTML = `Ops, você errou dessa vez,a soma entre ${n1} e ${n2} é igual a ${soma} e não ${val}`
-            }
-        }
-    </script>
+    <main>
+        <nav>
+            <a href="pagintro.html" target="frame">Inicio</a>
+            <a href="pag01.html" target="frame">Soma</a>
+            <a href="#">Subtração</a>
+            <a href="#">Multiplicação</a>
+            <a href="#">Divisão</a>
+        </nav>
+        <iframe src="pagintro.html" frameborder="1" name="frame"></iframe>
+    </main>
 </body>
 </html>
