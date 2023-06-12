@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+</head>
+<body>
+    <h1>Tratando dados</h1>
+    <script>
+        /*
+        O prompt retorna uma string, então se for fazer calculo tem que fazer a transformação de string para int
+        var nome = window.prompt('Digite seu nome:')
+        window.alert(`Bem vindo ${nome} Espero que goste do site!`)
+        */
+
+        /*
+        Converter de STRING PARA NUMBER - 3 FORMAS!
+        • Number(VALOR)
+        • Number.parseFloat(VALOR)
+        • Number.parseInt(VALOR)
+        */
+
+        //•• EXEMPLO DE FORMATAÇÃO DE STRING PARA NUMBER
+        
+        /*
+        var n1 = Number(window.prompt('Número 1: '))
+        var n2 = Number(window.prompt('Número 2: '))
+        var soma = (n1 + n2)
+        window.alert(soma)
+        */
+
+        /*
+        Para converter de number para string - 2 FORMAS!
+        String(valor) - mais utilizada!
+        valor.toString()
+        TEMPLATE STRING PARA FORMATAÇÃO (`OI SEU NOME É ${nome}`) - o texto tem que estar entre crase.
+
+        Da pra contar quantos caracteres existem nume string utilizando (s.length)
+        Deixar todas as letras Maiusculas s.toUpperCase() ou minuscula s.toLowerCase()
+        */
+
+        /*
+        var nome = 'Luis'
+        document.writeln(`Seu nome é: ${nome}, ele contem ${nome.length} caracteres, escrito todo em maiusculo fica ${nome.toUpperCase()} e minusculo ${nome.toLowerCase()}`)
+        */
+
+        //FIXAR CASAS DECIMAIS E TROCAR '.' POR ','
+        
+        /*
+        var n1 = 1545.5
+        n1.toFixed(2).replace('.',',') // fixar 2 casa depois da virgula e trocar o . por uma virgula
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // adicionar o R$ no valor
+        */
+
+
+
+
+    </script>
+</body>
+</html>
