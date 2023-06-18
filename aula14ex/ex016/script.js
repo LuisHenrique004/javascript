@@ -1,33 +1,30 @@
 function contar() {
-    var ini = document.getElementById('txti')
-    var fim = document.getElementById('txtf')
-    var passo = document.getElementById('txtp')
+    var inicio = document.getElementById('idini')
+    var fim = document.getElementById('idfim')
+    var passo = document.getElementById('idpasso')
     var res = document.getElementById('res')
 
-    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        res.innerHTML = '[ERRO] Faltam dados!'
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        res.innerHTML = "[ERRO] PREENCHA TODOS OS CAMPOS"
     } else {
-        res.innerHTML = 'Contando: <br>'
-        var i = Number(ini.value)
+        var i = Number(inicio.value)
         var f = Number(fim.value)
         var p = Number(passo.value)
-        
         if (p <= 0) {
-            window.alert('Passo invalido!')
+            window.alert('O Passo não pode ser 0')
             p = 1
         }
-        if (i < f) {
-            //Contagem crescente
-            for(var c = i; c <= f; c += p) {
-                res.innerHTML += `${c} 👉 `
-            } 
+        if(i < f) {
+            res.innerHTML = `Contando: <br>`
+            for(var c = i; c <= f; c += p) { 
+                res.innerHTML += `${c} \u{1F449}`
+            }
         } else {
-            //Contagem regressiva
-            for (var c = i; c >= f; c -= p) {
-                res.innerHTML += `${c} 👉 `
+            res.innerHTML = `Contando: <br>`
+            for(var c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1F449}`
             }
         }
-        res.innerHTML += `🏁`
-    }      
+        res.innerHTML += `\u{1F3C1}`
+    }
 }
-
