@@ -20,6 +20,12 @@ main {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
 }
 
+main > div > form > div {
+    text-align: left;
+    margin: 10px 0px;
+}
+
 footer {
     color: white;
 }
+
