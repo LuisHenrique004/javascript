@@ -8,15 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
+        <form action="">
+            <div>
+                <label for="inum">Número: </label>
+                <input type="number" name="num" id="inum">
+                <input type="button" value="Gerar tabuada" onclick="calcular()">
+            </div>
+            <div>
+                <select name="tabuada" id="res" size="10">
+                    <option value="num">Digite um número acima</option> 
+                </select>
+            </div>
+        </form>
     </main>
     <footer>
         <p>&copy; <em>CursoemVideo</em></p>
