@@ -4,8 +4,12 @@ function calcular() {
     let n = Number(num.value)
     res.innerHTML = ''
 
-    for(var i = 1; i <= 10; i++) {
-        var calc = (n * i)
-        res.innerHTML += `<option>${n} x ${i} = ${calc}</option>`
-    }
+    if (num.value.length == 0) {
+        window.alert('Digite um número')
+    } else {
+        for(var i = 1; i <= 10; i++) {
+            var calc = (n * i)
+            res.innerHTML += `<option>${n} x ${i} = ${calc}</option>`
+        }
+    }    
 }
