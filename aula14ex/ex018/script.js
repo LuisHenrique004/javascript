@@ -11,8 +11,11 @@ let menor = 0
 function adicionar() {
     let n = Number(txtn.value)
 
-    //regra para adicionar número
-    if(txtn.value.length == '' || n < 1 || n > 100) {
+     //regra para adicionar número
+    if(lista.indexOf(n) != -1) {
+        alert('[ERRO] O valor já foi encontrado na lista')
+    }
+    else if(txtn.value.length == '' || n < 1 || n > 100) {
         alert('[Erro] Erro ao informar o valor')
     } else {
         lista.push(n)
