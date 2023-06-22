@@ -40,11 +40,15 @@ function adicionar() {
 
 
 function calcular() {
-    let msg = window.document.getElementById('calc')
-    msg.innerHTML = `Ao todo, temos ${lista.length} números cadastrados. <br>
-    O maior valor informado foi ${maior} <br>
-    O menor valor informado foi ${menor} <br>
-    Somando todos os valores, temos ${soma} <br>
-    A média dos valores digitados é ${media}`
+    if(res.length == '') {
+        alert('Adicione valores antes de finalizar!')
+    } else {
+        let msg = window.document.getElementById('calc')
+        msg.innerHTML = `Ao todo, temos ${lista.length} números cadastrados. <br>
+        O maior valor informado foi ${maior} <br>
+        O menor valor informado foi ${menor} <br>
+        Somando todos os valores, temos ${soma} <br>
+        A média dos valores digitados é ${media}`
+    }    
 }
 
