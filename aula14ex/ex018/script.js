@@ -21,7 +21,7 @@ function adicionar() {
         lista.push(n)
         res.innerHTML += `<option>Valor ${n} adicionado</option>`
         soma += n
-        media = soma / 2
+        media = soma / lista.length
         
         //Calcular maior número
         for (let pos in lista) {
